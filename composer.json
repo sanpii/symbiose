@@ -7,6 +7,7 @@
         "symfony/symfony": "~2.5",
         "twig/extensions": "~1.0",
         "symfony/assetic-bundle": "~2.3",
+        "symfony/monolog-bundle": "~2.4",
         "sensio/distribution-bundle": "~3.0.12",
         "pomm-project/pomm-bundle": "~2.0@dev",
         "pomm-project/model-manager": "~2.0@dev"
