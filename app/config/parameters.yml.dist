@@ -4,3 +4,9 @@ parameters:
 
     # A secret key that's used to generate certain security-related tokens
     secret:            ThisTokenIsNotSoSecretChangeIt
+
+    database_host: 127.0.0.1
+    database_port: 5234
+    database_name: symfony
+    database_user: postgres
+    database_password: 1234
