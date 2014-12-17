@@ -1,10 +1,7 @@
-# This file is a "template" of what your parameters.yml file should look like
+# This file is auto-generated during the composer install
 parameters:
-    locale:            en
-
-    # A secret key that's used to generate certain security-related tokens
-    secret:            ThisTokenIsNotSoSecretChangeIt
-
+    locale: en
+    secret: ThisTokenIsNotSoSecretChangeIt
     database_host: 127.0.0.1
     database_port: 5234
     database_name: symfony

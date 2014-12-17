@@ -10,7 +10,8 @@
         "symfony/monolog-bundle": "~2.4",
         "sensio/distribution-bundle": "~3.0.12",
         "pomm-project/pomm-bundle": "~2.0@dev",
-        "pomm-project/model-manager": "~2.0@dev"
+        "pomm-project/model-manager": "~2.0@dev",
+        "incenteev/composer-parameter-handler": "~2.0"
     },
     "require-dev": {
         "atoum/atoum": "~1.0",
@@ -31,11 +32,13 @@
             "SymfonyStandard\\Composer::hookRootPackageInstall"
         ],
         "post-install-cmd": [
+            "Incenteev\\ParameterHandler\\ScriptHandler::buildParameters",
             "Sensio\\Bundle\\DistributionBundle\\Composer\\ScriptHandler::buildBootstrap",
             "Sensio\\Bundle\\DistributionBundle\\Composer\\ScriptHandler::clearCache",
             "Sensio\\Bundle\\DistributionBundle\\Composer\\ScriptHandler::removeSymfonyStandardFiles"
         ],
         "post-update-cmd": [
+            "Incenteev\\ParameterHandler\\ScriptHandler::buildParameters",
             "Sensio\\Bundle\\DistributionBundle\\Composer\\ScriptHandler::buildBootstrap",
             "Sensio\\Bundle\\DistributionBundle\\Composer\\ScriptHandler::clearCache",
             "Sensio\\Bundle\\DistributionBundle\\Composer\\ScriptHandler::removeSymfonyStandardFiles"
@@ -46,6 +49,10 @@
     },
     "extra": {
         "symfony-app-dir": "app",
-        "symfony-web-dir": "web"
+        "symfony-web-dir": "web",
+        "symfony-assets-install": "relative",
+        "incenteev-parameters": {
+            "file": "app/config/parameters.yml"
+        }
     }
 }
