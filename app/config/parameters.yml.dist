@@ -3,7 +3,7 @@ parameters:
     locale: en
     secret: ThisTokenIsNotSoSecretChangeIt
     database_host: 127.0.0.1
-    database_port: 5234
+    database_port: 5432
     database_name: symfony
     database_user: postgres
     database_password: 1234
