@@ -9,8 +9,10 @@
         "symfony/assetic-bundle": "~2.3",
         "symfony/monolog-bundle": "~2.4",
         "sensio/distribution-bundle": "~3.0.12",
+        "pomm-project/foundation": "~2.0@dev",
         "pomm-project/pomm-bundle": "~2.0@dev",
         "pomm-project/model-manager": "~2.0@dev",
+        "pomm-project/pomm-symfony-bridge": "~2.0@dev",
         "incenteev/composer-parameter-handler": "~2.0"
     },
     "require-dev": {
