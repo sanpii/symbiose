@@ -13,6 +13,3 @@ web_profiler:
 
 assetic:
     use_controller: true
-
-pomm:
-    web_profiler: true
