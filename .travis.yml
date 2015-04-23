@@ -1,0 +1,10 @@
+language: php
+
+before_script:
+    - php -S localhost:8080 -t web/ web/app_dev.php &> /dev/null &
+    - cp behat.yml{-dist,}
+    - composer install
+
+script:
+    - ./bin/atoum
+    - ./bin/behat -fprogress --tags='~@user'
