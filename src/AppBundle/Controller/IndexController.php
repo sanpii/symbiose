@@ -24,7 +24,8 @@ class IndexController
 
         return new Response(
             $this->templating->render(
-                'AppBundle:Index:index.html.twig'
+                'AppBundle:Index:index.html.twig',
+                compact('result')
             )
         );
     }
