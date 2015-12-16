@@ -1,6 +1,9 @@
 imports:
     - { resource: parameters.yml }
 
+parameters:
+    session_name: symbiose
+
 framework:
     #esi:             ~
     #translator:      { fallback: "%locale%" }
@@ -20,6 +23,7 @@ framework:
     session:
         # handler_id set to null will use default session handler from php.ini
         handler_id:  ~
+        name: %session_name%
     fragments:       ~
     http_method_override: true
 
