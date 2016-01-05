@@ -5,6 +5,7 @@ parameters:
     session_name: symbiose
 
 framework:
+    assets: ~
     #esi:             ~
     #translator:      { fallback: "%locale%" }
     secret:          "%secret%"
