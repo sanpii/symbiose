@@ -5,6 +5,7 @@ parameters:
     session_name: symbiose
 
 framework:
+    assets: ~
     #esi:             ~
     #translator:      { fallback: "%locale%" }
     secret:          "%secret%"
@@ -34,8 +35,8 @@ twig:
 
 # Assetic Configuration
 assetic:
-    debug:          "%kernel.debug%"
-    use_controller: false
+    debug:          '%kernel.debug%'
+    use_controller: '%kernel.debug%'
     bundles:        [ 'AppBundle' ]
     #java: /usr/bin/java
     filters:
