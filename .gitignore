@@ -1,7 +1,8 @@
 /app/bootstrap.php.cache
 /app/config/parameters.yml
-/bin/
-!bin/composer
+/bin/*
+!bin/console
+!bin/symfony_requirements
 /composer.phar
 /composer.lock
 /var/*
