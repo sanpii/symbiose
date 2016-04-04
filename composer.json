@@ -22,7 +22,8 @@
         "classmap": [ "app/AppKernel.php" ]
     },
     "autoload-dev": {
-        "psr-4": { "Sanpi\\Test\\Unit\\": "tests/Unit" }
+        "psr-4": { "Sanpi\\Test\\Unit\\": "tests/Unit" },
+        "classmap": [ "tests/Features/bootstrap/FeatureContext.php" ]
     },
     "scripts": {
         "post-install-cmd": [
