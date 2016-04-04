@@ -6,7 +6,6 @@
         "symfony/symfony": "~3.0",
         "symfony/assetic-bundle": "~2.7",
         "symfony/monolog-bundle": "~2.8",
-        "sensio/distribution-bundle": "~5.0",
         "pomm-project/pomm-bundle": "~2.0",
         "incenteev/composer-parameter-handler": "~2.0"
     },
@@ -25,20 +24,10 @@
     },
     "scripts": {
         "post-install-cmd": [
-            "Incenteev\\ParameterHandler\\ScriptHandler::buildParameters",
-            "./vendor/sensio/distribution-bundle/Resources/bin/build_bootstrap.php  var/ vendor/",
-            "Sensio\\Bundle\\DistributionBundle\\Composer\\ScriptHandler::clearCache",
-            "Sensio\\Bundle\\DistributionBundle\\Composer\\ScriptHandler::installAssets",
-            "Sensio\\Bundle\\DistributionBundle\\Composer\\ScriptHandler::installRequirementsFile",
-            "Sensio\\Bundle\\DistributionBundle\\Composer\\ScriptHandler::prepareDeploymentTarget"
+            "Incenteev\\ParameterHandler\\ScriptHandler::buildParameters"
         ],
         "post-update-cmd": [
-            "Incenteev\\ParameterHandler\\ScriptHandler::buildParameters",
-            "./vendor/sensio/distribution-bundle/Resources/bin/build_bootstrap.php  var/ vendor/",
-            "Sensio\\Bundle\\DistributionBundle\\Composer\\ScriptHandler::clearCache",
-            "Sensio\\Bundle\\DistributionBundle\\Composer\\ScriptHandler::installAssets",
-            "Sensio\\Bundle\\DistributionBundle\\Composer\\ScriptHandler::installRequirementsFile",
-            "Sensio\\Bundle\\DistributionBundle\\Composer\\ScriptHandler::prepareDeploymentTarget"
+            "Incenteev\\ParameterHandler\\ScriptHandler::buildParameters"
         ]
     },
     "config": {
