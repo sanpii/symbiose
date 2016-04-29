@@ -15,7 +15,7 @@
         "behat/mink-goutte-driver": "*"
     },
     "autoload": {
-        "psr-0": { "AppBundle": "src/" },
+        "psr-4": { "AppBundle\\": "src/" },
         "classmap": [ "app/AppKernel.php" ]
     },
     "autoload-dev": {
