@@ -1,5 +1,11 @@
 language: php
 
+sudo: false
+
+cache:
+  directories:
+    - $HOME/.composer/cache
+
 before_script:
     - php -S localhost:8080 -t web/ web/app_dev.php &> /dev/null &
     - cp behat.yml{-dist,}
