@@ -3,6 +3,7 @@
     "license": "MIT",
     "description": "Quickly create your next awesome PHP project based on symfony, pomm, atoum and behat",
     "require": {
+        "php": ">=7.0",
         "symfony/symfony": "~3.0",
         "symfony/assetic-bundle": "~2.7",
         "symfony/monolog-bundle": "~2.8",
