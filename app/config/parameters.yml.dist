@@ -2,8 +2,4 @@
 parameters:
     locale: en
     secret: ThisTokenIsNotSoSecretChangeIt
-    database_host: 127.0.0.1
-    database_port: 5432
-    database_name: symfony
-    database_user: postgres
-    database_password: 1234
+    database_dsn: psql://postgres:1234@127.0.0.1:5432/symfony
