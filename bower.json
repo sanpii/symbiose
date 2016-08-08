@@ -1,5 +1,5 @@
 {
-    "name": "estcequilyafirstjeudicettesemaine",
+    "name": "sanpi/symbiose",
     "dependencies": {
         "angular": "~1.2",
         "angular-route": "~1.2",
