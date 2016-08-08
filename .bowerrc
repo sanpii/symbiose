@@ -1,3 +1,3 @@
 {
-    "directory": "src/AppBundle/Resources/public/lib"
+    "directory": "src/Resources/public/lib"
 }
