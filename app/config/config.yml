@@ -24,7 +24,7 @@ framework:
     session:
         # handler_id set to null will use default session handler from php.ini
         handler_id:  ~
-        name: %session_name%
+        name: "%session_name%"
     fragments:       ~
     http_method_override: true
 
@@ -35,8 +35,8 @@ twig:
 
 # Assetic Configuration
 assetic:
-    debug:          '%kernel.debug%'
-    use_controller: '%kernel.debug%'
+    debug:          "%kernel.debug%"
+    use_controller: "%kernel.debug%"
     bundles:        [ 'AppBundle' ]
     #java: /usr/bin/java
     filters:
@@ -49,6 +49,6 @@ assetic:
 pomm:
     configuration:
         default:
-            dsn: '%database_dsn%'
+            dsn: "%database_dsn%"
     logger:
-        service: '@logger'
+        service: "@logger"
