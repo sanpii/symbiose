@@ -5,6 +5,7 @@
 !bin/symfony_requirements
 /composer.phar
 /composer.lock
+/src/Resources/public/
 /var/*
 !var/.gitkeep
 /vendor/
