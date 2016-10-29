@@ -1,4 +1,5 @@
 <?php
+declare(strict_types = 1);
 
 namespace AppBundle\Controller;
 
@@ -17,7 +18,7 @@ class IndexController
         $this->pomm = $pomm;
     }
 
-    public function indexAction()
+    public function indexAction(): Response
     {
         $result = $this->pomm['default']->getQueryManager()
             ->query('select 1');

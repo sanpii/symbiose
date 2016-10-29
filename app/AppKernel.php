@@ -1,4 +1,5 @@
 <?php
+declare(strict_types = 1);
 
 use \Symfony\Component\HttpKernel\Kernel;
 use \Symfony\Component\Config\Loader\LoaderInterface;
@@ -17,7 +18,7 @@ class AppKernel extends Kernel
         parent::__construct($env, $debug);
     }
 
-    public function registerBundles()
+    public function registerBundles(): array
     {
         $bundles = [
             new \Symfony\Bundle\FrameworkBundle\FrameworkBundle(),
@@ -36,17 +37,17 @@ class AppKernel extends Kernel
         return $bundles;
     }
 
-    public function getRootDir()
+    public function getRootDir(): string
     {
         return __DIR__;
     }
 
-    public function getCacheDir()
+    public function getCacheDir(): string
     {
         return __DIR__ . '/../var/cache/' . $this->getEnvironment();
     }
 
-    public function getLogDir()
+    public function getLogDir(): string
     {
         return __DIR__ . '/../var/logs/' . $this->getEnvironment();
     }
