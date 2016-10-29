@@ -5,6 +5,18 @@ use \Symfony\Component\Config\Loader\LoaderInterface;
 
 class AppKernel extends Kernel
 {
+    public function __construct()
+    {
+        $env = getenv('APP_ENVIRONMENT') ?: 'prod';
+        $debug = filter_var(getenv('APP_DEBUG'), FILTER_VALIDATE_BOOLEAN);
+
+        if ($debug === true) {
+            \Symfony\Component\Debug\Debug::enable();
+        }
+
+        parent::__construct($env, $debug);
+    }
+
     public function registerBundles()
     {
         $bundles = [
