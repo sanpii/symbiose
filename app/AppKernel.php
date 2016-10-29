@@ -48,7 +48,7 @@ class AppKernel extends Kernel
 
     public function getLogDir()
     {
-        return __DIR__ . '/../var/logs';
+        return __DIR__ . '/../var/logs/' . $this->getEnvironment();
     }
 
     public function registerContainerConfiguration(LoaderInterface $loader)
