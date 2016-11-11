@@ -10,6 +10,7 @@ cache:
 
 before_script:
     - php -S localhost:8080 -t web/ web/app_dev.php &> /dev/null &
+    - ln -s parameters.yml.dist app/config/parameters.yml
     - make
 
 script:

@@ -7,8 +7,7 @@
         "symfony/symfony": "~3.0",
         "symfony/assetic-bundle": "~2.7",
         "symfony/monolog-bundle": "~2.8",
-        "pomm-project/pomm-bundle": "~2.0",
-        "incenteev/composer-parameter-handler": "~2.0"
+        "pomm-project/pomm-bundle": "~2.0"
     },
     "require-dev": {
         "atoum/atoum": "~2.0",
@@ -23,14 +22,6 @@
         "psr-4": { "Sanpi\\Test\\Unit\\": "tests/Unit" },
         "classmap": [ "tests/Features/bootstrap/FeatureContext.php" ]
     },
-    "scripts": {
-        "post-install-cmd": [
-            "Incenteev\\ParameterHandler\\ScriptHandler::buildParameters"
-        ],
-        "post-update-cmd": [
-            "Incenteev\\ParameterHandler\\ScriptHandler::buildParameters"
-        ]
-    },
     "config": {
         "bin-dir": "bin"
     },
@@ -39,9 +30,6 @@
         "symfony-bin-dir": "bin",
         "symfony-var-dir": "var",
         "symfony-web-dir": "web",
-        "symfony-assets-install": "relative",
-        "incenteev-parameters": {
-            "file": "app/config/parameters.yml"
-        }
+        "symfony-assets-install": "relative"
     }
 }
