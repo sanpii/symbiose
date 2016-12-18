@@ -7,7 +7,7 @@ use \PommProject\Foundation\Pomm;
 use \Symfony\Component\HttpFoundation\Response;
 use \Symfony\Component\Templating\EngineInterface;
 
-class IndexController
+final class IndexController
 {
     private $pomm;
     private $templating;
