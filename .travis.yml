@@ -5,15 +5,20 @@ sudo: false
 php: 7.0
 
 cache:
-  directories:
-    - $HOME/.composer/cache
+    directories:
+        - $HOME/.composer/cache
+
+env:
+    - LOCALE=en SECRET=secret DATABASE_DSN='pgsql://postgres@127.0.0.1/travis_ci_test'
+
+before_install:
+    - npm install -g bower
+
+install:
+    - make
 
 before_script:
-    - npm install -g bower
-    - bower install
-    - php -S localhost:8080 -t web/ web/app_dev.php &> /dev/null &
-    - ln -s parameters.yml.dist app/config/parameters.yml
-    - make
+    - php -S localhost:8080 -t web/ web/index.php &> /dev/null &
 
 script:
     - ./bin/atoum
