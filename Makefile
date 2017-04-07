@@ -1,7 +1,7 @@
 BOWER_FLAGS=
 COMPOSER_FLAGS=--no-interaction
 
-ifeq ($(APP_ENVIRONMENT),prod)
+ifeq ($(APP_ENV),prod)
 	BOWER_FLAGS+=--production
 	COMPOSER_FLAGS+=--prefer-dist --no-dev --classmap-authoritative
 endif

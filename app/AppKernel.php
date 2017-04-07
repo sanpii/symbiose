@@ -8,7 +8,7 @@ class AppKernel extends Kernel
 {
     public function __construct()
     {
-        $env = getenv('APP_ENVIRONMENT') ?: 'prod';
+        $env = getenv('APP_ENV') ?: 'prod';
         $debug = filter_var(getenv('APP_DEBUG'), FILTER_VALIDATE_BOOLEAN);
 
         if ($debug === true) {
