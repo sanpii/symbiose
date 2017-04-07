@@ -6,8 +6,9 @@
 
 ## Installation
 
-    $ curl http://getcomposer.org/installer | php
-    $ php composer.phar -sdev create-project sanpi/symbiose
+```
+$ composer -sdev create-project sanpi/symbiose
+```
 
 ## Components
 
