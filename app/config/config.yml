@@ -1,10 +1,7 @@
-imports:
-    - { resource: parameters.yml }
-
 framework:
     assets: ~
-    secret: "%secret%"
-    default_locale: "%locale%"
+    secret: "%env(SECRET)%"
+    default_locale: "%env(LOCALE)%"
     router:
         resource: "%kernel.root_dir%/config/routing.yml"
     templating:
@@ -24,6 +21,6 @@ assetic:
 pomm:
     configuration:
         default:
-            dsn: "%database_dsn%"
+            dsn: "%env(DATABASE_DSN)%"
     logger:
         service: "@logger"

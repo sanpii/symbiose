@@ -1,5 +1,0 @@
-# This file is auto-generated during the composer install
-parameters:
-    locale: en
-    secret: ThisTokenIsNotSoSecretChangeIt
-    database_dsn: pgsql://postgres:1234@127.0.0.1:5432/symfony

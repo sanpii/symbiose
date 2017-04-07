@@ -1,6 +1,7 @@
 <?php
 declare(strict_types = 1);
 
+use \Symfony\Component\Dotenv;
 use \Symfony\Component\HttpKernel\Kernel;
 use \Symfony\Component\Config\Loader\LoaderInterface;
 
