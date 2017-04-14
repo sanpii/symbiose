@@ -27,8 +27,7 @@
         "classmap": [ "app/AppKernel.php" ]
     },
     "autoload-dev": {
-        "psr-4": { "Sanpi\\Test\\Unit\\": "tests/Unit" },
-        "classmap": [ "tests/Features/bootstrap/FeatureContext.php" ]
+        "psr-4": { "Sanpi\\Test\\Unit\\": "tests/Unit" }
     },
     "config": {
         "bin-dir": "bin"
