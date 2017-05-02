@@ -16,7 +16,7 @@ set_time_limit(0);
 require __DIR__.'/../vendor/autoload.php';
 
 $env = __DIR__ . '/../.env';
-if (is_readable($env)) {
+if (is_file($env) && getenv('APP_ENV') !== 'prod') {
     (new Dotenv\Dotenv)
         ->load($env);
 }

@@ -7,7 +7,7 @@ use \Symfony\Component\HttpFoundation\Request;
 require_once __DIR__ . '/../vendor/autoload.php';
 
 $env = __DIR__ . '/../.env';
-if (is_file($env)) {
+if (is_file($env) && getenv('APP_ENV') !== 'prod') {
     (new Dotenv\Dotenv)
         ->load($env);
 }
