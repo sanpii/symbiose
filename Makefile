@@ -1,3 +1,7 @@
+ifneq ("$(wildcard .env)","")
+	include .env
+endif
+
 BOWER_FLAGS=
 COMPOSER_FLAGS=--no-interaction
 
