@@ -8,7 +8,6 @@
         "symfony/asset": "~3.0",
         "symfony/assetic-bundle": "~2.8",
         "symfony/config": "~3.0",
-        "symfony/dotenv": "~3.0@dev",
         "symfony/framework-bundle": "~3.0",
         "symfony/http-kernel": "~3.0",
         "symfony/monolog-bundle": "~3.0",
@@ -20,6 +19,7 @@
         "behatch/contexts": "~2.6|~3.0",
         "behat/mink-goutte-driver": "*",
         "symfony/debug-bundle": "~3.0",
+        "symfony/dotenv": "~3.0@dev",
         "symfony/web-profiler-bundle": "~3.0"
     },
     "autoload": {
