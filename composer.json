@@ -2,7 +2,6 @@
     "name": "sanpi/symbiose",
     "license": "MIT",
     "description": "Quickly create your next awesome PHP project based on symfony, pomm, atoum and behat",
-    "minimum-stability": "dev",
     "require": {
         "php": ">=7.0",
         "pomm-project/pomm-bundle": "~2.3",
@@ -12,7 +11,7 @@
         "symfony/flex": "~1.0",
         "symfony/framework-bundle": "~3.3",
         "symfony/http-kernel": "~3.3",
-        "symfony/monolog-bundle": "~3.3",
+        "symfony/monolog-bundle": "~3.1",
         "symfony/templating": "~3.3",
         "symfony/twig-bundle": "~3.3"
     },
