@@ -19,7 +19,7 @@
         "behatch/contexts": "~2.6|~3.0",
         "behat/mink-goutte-driver": "*",
         "symfony/debug-bundle": "~3.0",
-        "symfony/dotenv": "~3.0@dev",
+        "symfony/dotenv": "~3.3",
         "symfony/web-profiler-bundle": "~3.0"
     },
     "autoload": {
