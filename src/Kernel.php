@@ -40,7 +40,7 @@ final class Kernel extends HttpKernel
         if (is_dir($confDir . '/packages/' . $this->getEnvironment())) {
             $loader->load($confDir . '/packages/' . $this->getEnvironment() . '/**/*.yaml', 'glob');
         }
-        $loader->load($confDir . '/services.yaml', 'glob');
+        $loader->load($confDir . '/services.yaml');
     }
 
     protected function configureRoutes(RouteCollectionBuilder $routes): void
@@ -52,6 +52,6 @@ final class Kernel extends HttpKernel
         if (is_dir($confDir . '/routes/' . $this->getEnvironment())) {
             $routes->import($confDir . '/routes/' . $this->getEnvironment() . '/**/*.yaml', '/', 'glob');
         }
-        $routes->import($confDir . '/routes.yaml', '/', 'glob');
+        $routes->import($confDir . '/routes.yaml', '/');
     }
 }
