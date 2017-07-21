@@ -46,12 +46,12 @@ final class Kernel extends HttpKernel
     protected function configureRoutes(RouteCollectionBuilder $routes): void
     {
         $confDir = dirname(__DIR__).'/config';
-        if (is_dir($confDir.'/routing/')) {
-            $routes->import($confDir.'/routing/*.yaml', '/', 'glob');
+        if (is_dir($confDir.'/routes/')) {
+            $routes->import($confDir.'/routes/*.yaml', '/', 'glob');
         }
-        if (is_dir($confDir.'/routing/'.$this->getEnvironment())) {
-            $routes->import($confDir.'/routing/'.$this->getEnvironment().'/**/*.yaml', '/', 'glob');
+        if (is_dir($confDir.'/routes/'.$this->getEnvironment())) {
+            $routes->import($confDir.'/routes/'.$this->getEnvironment().'/**/*.yaml', '/', 'glob');
         }
-        $routes->import($confDir.'/routing.yaml', '/', 'glob');
+        $routes->import($confDir.'/routes.yaml', '/', 'glob');
     }
 }
