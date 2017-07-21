@@ -6,7 +6,6 @@
 /composer.phar
 /composer.lock
 /src/Resources/public/
-/web/css/
-/web/images/
-/web/js/
-/web/bundles/
+/public/css/
+/public/images/
+/public/js/
