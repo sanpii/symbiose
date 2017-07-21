@@ -36,11 +36,11 @@ final class Kernel extends HttpKernel
     protected function configureContainer(ContainerBuilder $container, LoaderInterface $loader): void
     {
         $confDir = dirname(__DIR__).'/config';
-        $loader->import($confDir.'/packages/*.yaml', 'glob');
+        $loader->load($confDir.'/packages/*.yaml', 'glob');
         if (is_dir($confDir.'/packages/'.$this->getEnvironment())) {
-            $loader->import($confDir.'/packages/'.$this->getEnvironment().'/**/*.yaml', 'glob');
+            $loader->load($confDir.'/packages/'.$this->getEnvironment().'/**/*.yaml', 'glob');
         }
-        $loader->import($confDir.'/container.yaml', 'glob');
+        $loader->load($confDir.'/services.yaml', 'glob');
     }
 
     protected function configureRoutes(RouteCollectionBuilder $routes): void
