@@ -20,6 +20,10 @@ ifneq ("$(wildcard bower.json)","")
 	TASKS+=assets
 endif
 
+ifneq ("$(wildcard bin/console)","")
+	TASKS+=cache
+endif
+
 all: $(TASKS)
 
 vendor: composer.lock
@@ -35,7 +39,10 @@ assets: src/Resources/public/lib
 src/Resources/public/lib: bower.json
 	bower install $(BOWER_FLAGS)
 
+cache:
+	bin/console cache:warmup $(SYMFONY_FLAGS)
+
 distclean:
 	rm -rf vendor composer.lock src/Resources/public/lib
 
-.PHONY: all assets distclean
+.PHONY: all assets cache distclean
