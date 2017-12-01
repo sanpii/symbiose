@@ -25,7 +25,7 @@ final class Kernel extends HttpKernel
 
     public function registerBundles(): iterable
     {
-        $contents = require dirname(__DIR__) . '/config/bundles.php';
+        $contents = require $this->getProjectDir() . '/config/bundles.php';
         foreach ($contents as $class => $envs) {
             if (isset($envs['all']) || isset($envs[$this->getEnvironment()])) {
                 yield new $class();
@@ -35,7 +35,7 @@ final class Kernel extends HttpKernel
 
     protected function configureContainer(ContainerBuilder $container, LoaderInterface $loader): void
     {
-        $confDir = dirname(__DIR__) . '/config';
+        $confDir = $this->getProjectDir() . '/config';
         $loader->load($confDir . '/packages/*.yaml', 'glob');
         if (is_dir($confDir . '/packages/' . $this->getEnvironment())) {
             $loader->load($confDir . '/packages/' . $this->getEnvironment() . '/**/*.yaml', 'glob');
@@ -45,7 +45,7 @@ final class Kernel extends HttpKernel
 
     protected function configureRoutes(RouteCollectionBuilder $routes): void
     {
-        $confDir = dirname(__DIR__) . '/config';
+        $confDir = $this->getProjectDir() . '/config';
         if (is_dir($confDir . '/routes/')) {
             $routes->import($confDir . '/routes/*.yaml', '/', 'glob');
         }
