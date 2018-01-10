@@ -3,6 +3,7 @@ default:
         default:
             paths: [ %paths.base%/tests/Features ]
             contexts:
+                - FeatureContext
                 - Behat\MinkExtension\Context\MinkContext
                 - behatch:context:browser
                 - behatch:context:debug
