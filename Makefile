@@ -6,7 +6,7 @@ BOWER_FLAGS=
 COMPOSER_FLAGS=--no-interaction
 SYMFONY_FLAGS=--no-interaction
 
-ifeq ($(APP_ENV),prod)
+ifneq ($(APP_ENV),dev)
 	BOWER_FLAGS+=--production
 	COMPOSER_FLAGS+=--prefer-dist --no-dev --classmap-authoritative
 endif

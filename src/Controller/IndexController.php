@@ -1,7 +1,7 @@
 <?php
 declare(strict_types = 1);
 
-namespace AppBundle\Controller;
+namespace App\Controller;
 
 use \PommProject\Foundation\Pomm;
 use \Symfony\Component\HttpFoundation\Response;
@@ -20,12 +20,12 @@ final class IndexController
 
     public function indexAction(): Response
     {
-        $result = $this->pomm['default']->getQueryManager()
+        $result = $this->pomm['db']->getQueryManager()
             ->query('select 1');
 
         return new Response(
             $this->templating->render(
-                'AppBundle:Index:index.html.twig',
+                'Index/index.html.twig',
                 compact('result')
             )
         );
