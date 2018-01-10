@@ -41,6 +41,7 @@ final class Kernel extends HttpKernel
             $loader->load($confDir . '/packages/' . $this->getEnvironment() . '/**/*.yaml', 'glob');
         }
         $loader->load($confDir . '/services.yaml');
+        $loader->load($confDir . '/services_' . $this->environment . '.yaml');
     }
 
     protected function configureRoutes(RouteCollectionBuilder $routes): void
