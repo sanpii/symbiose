@@ -5,6 +5,7 @@ parameters:
 
 services:
     index_controller:
+        public: true
         class: App\Controller\IndexController
         arguments: ['@templating', '@pomm']
 
