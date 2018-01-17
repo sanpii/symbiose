@@ -1,11 +1,5 @@
-/app/bootstrap.php.cache
-/app/config/parameters.yml
 /bin/*
-!bin/console
-!bin/symfony_requirements
 /composer.phar
 /composer.lock
-/src/Resources/public/
-/public/css/
-/public/images/
-/public/js/
+/public/lib/
+/symfony.lock
