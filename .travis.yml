@@ -9,7 +9,7 @@ cache:
         - $HOME/.composer/cache
 
 env:
-    - LOCALE=en SECRET=secret DATABASE_DSN='pgsql://postgres@127.0.0.1/travis_ci_test'
+    - APP_ENV=dev LOCALE=en APP_DEBUG=false APP_SECRET=secret DATABASE_URL='pgsql://postgres@127.0.0.1/travis_ci_test'
 
 before_install:
     - npm install -g bower
