@@ -33,8 +33,6 @@ composer.lock: composer.json
 
 assets: src/Resources/public/lib
 	bin/console cache:clear $(SYMFONY_FLAGS)
-	bin/console assets:install $(SYMFONY_FLAGS) --symlink --relative web
-	bin/console assetic:dump $(SYMFONY_FLAGS)
 
 src/Resources/public/lib: bower.json
 	bower install $(BOWER_FLAGS)
