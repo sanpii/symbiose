@@ -29,7 +29,11 @@
         "psr-4": { "App\\": "src/" }
     },
     "autoload-dev": {
-        "psr-4": { "Sanpi\\Test\\Unit\\": "tests/Unit" }
+        "psr-4": { "Sanpi\\Test\\Unit\\": "tests/Unit" },
+        "files": [
+            "tests/Features/bootstrap/FeatureContext.php",
+            "tests/Features/bootstrap/Bootstrap.php"
+        ]
     },
     "config": {
         "bin-dir": "bin"
