@@ -31,10 +31,10 @@ vendor: composer.lock
 composer.lock: composer.json
 	composer install $(COMPOSER_FLAGS)
 
-assets: src/Resources/public/lib
+assets: public/lib
 	bin/console cache:clear $(SYMFONY_FLAGS)
 
-src/Resources/public/lib: bower.json
+public/lib: bower.json
 	bower install $(BOWER_FLAGS)
 
 cache:
